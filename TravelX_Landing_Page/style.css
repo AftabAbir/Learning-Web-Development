@@ -1,0 +1,747 @@
+
+/* =====================================================
+   GLOBAL RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =====================================================
+   ROOT VARIABLES
+   Professional developers usually use variables
+===================================================== */
+
+:root {
+    --primary-color: #f5a623;
+    --white-color: #ffffff;
+    --dark-color: #0f172a;
+    --text-color: #d9d9d9;
+    --glass-color: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    
+    background-color: black;
+    
+}
+
+/* =====================================================
+   LANDING PAGE BACKGROUND
+   IMPORTANT:
+   Replace travel-bg.jpg with your image name
+===================================================== */
+
+.landing-page {
+
+    min-height: 100%;
+    
+    background:
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0.85),
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.15)),
+
+        url(IMG-20230608-WA0134_5.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    padding: 30px 60px;
+}
+
+/* =====================================================
+   NAVBAR SECTION
+===================================================== */
+
+.header-nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 80px;
+}
+
+/* Left Nav */
+.left-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* =====================================================
+   HAMBURGER MENU ICON
+===================================================== */
+
+.menu-icon {
+    cursor: pointer;
+}
+
+.menu-icon span {
+
+    display: block;
+
+    width: 28px;
+    height: 3px;
+
+    margin: 6px 0;
+
+    border-radius: 20px;
+
+    background-color: var(--white-color);
+
+    transition: 0.3s ease;
+}
+
+/* Small hover animation */
+.menu-icon:hover span:nth-child(2) {
+    width: 18px;
+}
+
+/* =====================================================
+   NAVIGATION LINKS
+===================================================== */
+
+.menu-section {
+    display: flex;
+    gap: 25px;
+}
+
+.menu-section a {
+
+    text-decoration: none;
+    color: var(--white-color);
+
+    font-size: 15px;
+    font-weight: 500;
+
+    position: relative;
+
+    transition: 0.3s ease;
+}
+
+/* Modern underline hover effect */
+.menu-section a::after {
+
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+
+    width: 0%;
+    height: 2px;
+
+    background-color: var(--primary-color);
+
+    transition: 0.3s ease;
+}
+
+.menu-section a:hover::after {
+    width: 100%;
+}
+
+.menu-section a:hover {
+    color: var(--primary-color);
+}
+
+/* =====================================================
+   RIGHT NAV SECTION
+===================================================== */
+
+.right-nav {
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* =====================================================
+   SEARCH BOX
+===================================================== */
+
+.search-box {
+
+    display: flex;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 50px;
+
+    overflow: hidden;
+}
+
+.search-box input {
+
+    width: 230px;
+
+    border: none;
+    outline: none;
+
+    padding: 12px 18px;
+
+    background: transparent;
+
+    color: white;
+}
+
+.search-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box button {
+
+    border: none;
+    cursor: pointer;
+
+    padding: 12px 18px;
+
+    background-color: transparent;
+
+    color: white;
+
+    transition: 0.3s ease;
+}
+
+.search-box button:hover {
+    color: var(--primary-color);
+}
+
+/* =====================================================
+   LOGIN BUTTON
+===================================================== */
+
+.login-btn {
+
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 50px;
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s ease;
+}
+
+.login-btn:hover {
+
+    transform: translateY(-3px);
+
+    background-color: var(--primary-color);
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+
+.hero-section {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 75vh;
+}
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.hero-content {
+
+    max-width: 650px;
+
+    color: white;
+
+    /* animation: fadeUp 1s ease; */
+}
+
+.hero-content h4 {
+
+    letter-spacing: 4px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-content h1 {
+
+    font-size: 120px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-content h2 {
+
+    font-size: 58px;
+
+    margin-bottom: 25px;
+
+    color: var(--primary-color);
+}
+
+.hero-content p {
+
+    max-width: 520px;
+
+    line-height: 1.8;
+
+    color: var(--text-color);
+
+    margin-bottom: 35px;
+}
+
+/* =====================================================
+   HERO BUTTONS
+===================================================== */
+
+.hero-buttons {
+
+    display: flex;
+    gap: 18px;
+}
+
+.hero-buttons a {
+
+    text-decoration: none;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+/* Primary Button */
+.discover-btn {
+
+    background-color: var(--primary-color);
+
+    color: black;
+}
+
+.discover-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 25px rgba(245, 166, 35, 0.4);
+}
+
+/* Secondary Button */
+.secondary-btn {
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    color: white;
+
+    backdrop-filter: blur(10px);
+}
+
+.secondary-btn:hover {
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    transform: translateY(-4px);
+}
+
+/* =====================================================
+   SOCIAL MEDIA ICONS
+===================================================== */
+
+.social-media {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    padding: 20px 10px;
+
+    border-radius: 30px;
+
+    background-color: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(10px);
+
+    animation: fadeSide 1.2s ease;
+}
+
+.social-media a {
+
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 20px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    transition: 0.3s ease;
+}
+
+.social-media a:hover {
+
+    background-color: var(--primary-color);
+
+    color: black;
+
+    transform: scale(1.1);
+}
+
+/* =====================================================
+   TOUR PACKAGE SECTION
+===================================================== */
+
+.package-section {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    padding: 20px 0;
+
+    margin-top: 30px;
+}
+
+.package-section .arrow-icon{
+    color: var(--primary-color);
+    font-size: 5rem;
+    font-weight: lighter;
+    
+}
+
+.package-header{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.package-section h6{
+    color: var(--primary-color);
+    /* word-spacing: 2px; */
+    letter-spacing: 3px;
+    font-weight:normal;
+}
+
+.package-section h1{
+    color: var(--white-color);
+    font-size: 200;
+    font-weight: lighter;
+    letter-spacing: 5px;
+}
+
+/* =====================================================
+   SINGLE PACKAGE CARD
+===================================================== */
+
+.package-card {
+
+    width: 240px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(10px);
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.4s ease;
+    /* Smooth shadow */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* =====================================================
+   CARD HOVER EFFECT
+===================================================== */
+
+.package-card:hover {
+
+    transform: translateY(-10px);
+    background-color: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* =====================================================
+   CARD IMAGE
+===================================================== */
+
+.package-card img {
+
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: 0.4s ease;
+}
+
+/* Slight zoom effect on hover */
+
+.package-card:hover img {
+
+    transform: scale(1.05);
+}
+
+.package-card:hover a{
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   CARD CONTENT
+===================================================== */
+
+.card-content {
+
+    padding: 18px;
+}
+
+/* Card Title */
+
+.card-content h3 {
+
+    color: white;
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+}
+
+/* Card Paragraph */
+
+.card-content p {
+
+    color: #d1d5db;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    text-align: justify;
+}
+
+.card-content a{
+    justify-content: center;
+    text-decoration: none;
+    color: #d1d5db;
+    font-weight: bolder;
+    margin-top: 10px;
+}
+
+.footer-nav{
+    width: 100%;
+    
+    padding: 1rem 2rem;
+    height: fit-content;
+    
+    background-color: #0f172a;
+
+}
+
+/* .footer-nav p{
+    color: #ffffff;
+    text-align: center;
+    font-weight: bolder;
+} */
+
+
+.footer-inner{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+}
+
+.footer-brand h1{
+    color: var(--primary-color);
+}
+
+.footer-brand p{
+    color: var(--text-color);
+    font-size: smaller;
+}
+
+.footer-links a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: smaller;
+    padding: 3rem;
+}
+
+.footer-links a:hover{
+    color: var(--primary-color);
+}
+
+.footer-socials a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    width: 48px;
+    height: 48px;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.footer-socials a:hover{
+    /* background-color: var(--primary-color); */
+    color: var(--primary-color);
+    transform: scale(1.1);
+}
+
+.footer-bottom{
+    border-top: 1px solid grey;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+.footer-bottom p{
+    text-align: center;
+    color: grey;
+    font-size: smaller;
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeSide {
+
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .landing-page {
+        padding: 25px;
+    }
+
+    .hero-content h1 {
+        font-size: 80px;
+    }
+
+    .hero-content h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header-nav {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .left-nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .right-nav {
+        flex-direction: column;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .hero-content h1 {
+        font-size: 65px;
+    }
+
+    .hero-content h2 {
+        font-size: 32px;
+    }
+
+    .search-box input {
+        width: 180px;
+    }
+
+    .hero-buttons {
+        flex-wrap: wrap;
+    }
+
+    .social-media {
+        flex-direction: row;
+    }
+
+    .package-section {
+
+        justify-content: center;
+    }
+
+    .package-card {
+
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
